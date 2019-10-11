@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Editor } from 'slate-react'
 import { Value } from 'slate'
 import BoldMark from './BoldMark';
+import ItalicMark from './ItalicMark';
 
 
 const initialValue = Value.fromJSON({
@@ -50,6 +51,14 @@ export default class TextEditor extends Component {
                 change.toggleMark('bold') // pass in bold prop in BoldMark.js
                 return true
             }
+            case 'i': {
+                change.toggleMark('italic')
+                return true
+            }
+
+            default: {
+                return;
+            }
         }
     }
 
@@ -57,6 +66,8 @@ export default class TextEditor extends Component {
         switch (props.mark.type) {
             case 'bold':  // if mark type is "bold", wrap our text inside BoldMark component
                 return <BoldMark {...props} />
+            case 'italic':
+                return <ItalicMark {...props} />
         }
     }
 
