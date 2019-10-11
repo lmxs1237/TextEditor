@@ -3,7 +3,7 @@
    <yarn start>
 
 2. module not found: can't resolve 'module-name'...
-   use <yarn add module-name> in my-app dictionary
+   use <yarn add module-name> in my-app directory
 
 3. As of Slate 0.42.0, value object are no longer schema-aware, and the value.change()        
    method is no longer available. Use the editor.change() method on the new Editor  
