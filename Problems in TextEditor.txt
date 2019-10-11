@@ -4,3 +4,8 @@
 
 2. module not found: can't resolve 'module-name'...
    use <yarn add module-name> in my-app dictionary
+
+3. As of Slate 0.42.0, value object are no longer schema-aware, and the value.change()        
+   method is no longer available. Use the editor.change() method on the new Editor  
+   controller instead.   
+   https://github.com/indreklasn/slate-react-rich-text-editor/issues/1
